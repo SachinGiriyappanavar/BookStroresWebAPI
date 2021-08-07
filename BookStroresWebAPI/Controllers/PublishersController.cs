@@ -71,6 +71,25 @@ namespace BookStroresWebAPI.Controllers
             book2.Title = "Good night Moon - 1";
             book2.PublishedDate = DateTime.Now;
 
+            var sale1 = new Sale();
+
+            sale1.Quantity = 2;
+            sale1.StoreId = "8842";
+            sale1.OrderNum = "XYZ";
+            sale1.PayTerms = "Net 30";
+            sale1.OrderDate = DateTime.Now;
+
+            var sale2 = new Sale();
+
+            sale2.Quantity = 2;
+            sale2.StoreId = "7131";
+            sale2.OrderNum = "QA479.1";
+            sale2.PayTerms = "Net 20";
+            sale2.OrderDate = DateTime.Now;
+
+            book1.Sales.Add(sale1);
+            book2.Sales.Add(sale2);
+
             publisher.Books.Add(book1);
             publisher.Books.Add(book2);
 
